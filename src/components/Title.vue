@@ -1,0 +1,21 @@
+<template>
+  <div>
+      <!-- indigo : 배경색 지정, indigo--text : 글자색 지정 -->
+      <h3 class="indigo--text darken-4">
+          <v-icon size="1.5em" color="indigo darken-2">{{icon}}</v-icon>
+          <!-- pageTitle의 위치 지정, 부모가 pagetitle줌 -->
+          <slot></slot>
+      </h3>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Title',
+  props: ['icon']
+}
+</script>
+
+<style>
+
+</style>

@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="pa-3">
+    <page-title>
+      오늘의 날씨
+      <v-icon color="indigo">mdi-calendar-today</v-icon>
+    </page-title>
+    <v-icon>mdi-clock</v-icon> {{ new Date() | moment("YYYY-MM-DD hh:mm:ss")}}
+    <weather city="seoul" cityTitle="서울"></weather>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  export default {
+    name: 'Home',
+    
   }
-}
 </script>
